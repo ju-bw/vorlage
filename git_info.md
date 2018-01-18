@@ -98,3 +98,7 @@ git pull
 git push
 ~~~
 
+## Dateidownload
+
+wget https://bw1.eu/wp-content/uploads/2018/01/vorlage-master.zip
+
