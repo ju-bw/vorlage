@@ -1,0 +1,18 @@
+# -*- Makefile -*-
+# Ubuntu
+# gcc -v // Version 7.2
+# sudo apt -y install gcc-7 g++-7 
+# 14.1.18
+all: \
+	halloC_001.x \
+	halloC++_001.x \
+
+halloC_001.x: 
+	gcc-7 halloC_001.c -Wall -Wextra -std=c11 -lpthread -pthread -O0 -Wno-missing-field-initializers -g -lz meineFkt.c meineFkt.h -lm -o halloC_001.x
+halloC++_001.x: 
+	g++-7 halloC++_001.cpp -Wall -Wextra -std=c++17 -lpthread -pthread -O0 -Wno-missing-field-initializers -g -lz meineFkt.c meineFkt.h -lm -o halloC++_001.x
+
+# aufräumen:
+clean:
+	rm -f *.x *.o
+	#rm *.x 
